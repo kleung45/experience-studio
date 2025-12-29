@@ -23,23 +23,28 @@ const WorkPage: React.FC = () => {
         <>
             <section className="py-24 sm:py-32 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-black tracking-tighter text-slate-900 sm:text-6xl font-display">
+                    <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
+                        <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl font-display leading-tight">
                             Our Projects Portfolio
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-slate-600">
+                        <p className="mt-6 text-lg leading-relaxed text-slate-500 max-w-2xl mx-auto">
                             We blend physical space with digital innovation to create integrated retail, exhibition, and product experiences that captivate and convert.
                         </p>
                     </div>
-                    <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-20 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                         {projects.map((project, index) => (
-                            <div key={index} className="group">
-                                <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-200">
-                                    <img alt={project.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" src={project.image} />
+                            <div key={index} className="group cursor-pointer">
+                                <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10 group-hover:-translate-y-2">
+                                    <img alt={project.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src={project.image} />
                                 </div>
-                                <h3 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 font-display">{project.title}</h3>
-                                <p className="mt-2 text-base text-text-secondary">{project.description}</p>
-                                <a className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline" href="#">View Case Study <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span></a>
+                                <div className="space-y-3">
+                                    <h3 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 font-display group-hover:text-primary transition-colors">{project.title}</h3>
+                                    <p className="text-base text-slate-500 leading-relaxed line-clamp-2">{project.description}</p>
+                                    <a className="inline-flex items-center gap-2 text-sm font-bold text-primary group/link" href="#">
+                                        View Case Study
+                                        <span className="material-symbols-outlined text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+                                    </a>
+                                </div>
                             </div>
                         ))}
                     </div>

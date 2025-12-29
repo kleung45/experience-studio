@@ -11,48 +11,47 @@ const services = [
 
 const ServicesPage: React.FC = () => {
     return (
-        <section className="py-24 sm:py-32 bg-background-light">
+        <section className="py-24 sm:py-32 bg-slate-50">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-3xl text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl font-display">
+                <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
+                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-7xl font-display leading-tight">
                         Our Expertise
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-text-secondary">
+                    <p className="mt-8 text-xl leading-relaxed text-slate-500">
                         Delivering integrated design solutions across physical and digital realms. We blend strategy and creativity to craft experiences that captivate and convert.
                     </p>
                 </div>
-                <div className="mt-20 grid grid-cols-1 gap-0.5 sm:grid-cols-2 lg:grid-cols-3 bg-slate-200 border border-slate-200">
+                <div className="mt-24 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((service, index) => (
-                        <div key={index} className="group relative bg-white p-8 transition-all hover:bg-primary/5">
+                        <div key={index} className="group relative bg-white p-10 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 border border-slate-100">
                             <div className="flex h-full flex-col justify-between">
                                 <div>
-                                    <span className="material-symbols-outlined text-5xl text-primary mb-6 block">{service.icon}</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 font-display">{service.title}</h3>
-                                    <p className="mt-3 text-base text-text-secondary leading-relaxed">{service.description}</p>
+                                    <div className="size-16 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-8 transition-colors group-hover:bg-primary group-hover:text-white duration-500">
+                                        <span className="material-symbols-outlined text-4xl">{service.icon}</span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-slate-900 font-display mb-4">{service.title}</h3>
+                                    <p className="text-base text-slate-500 leading-relaxed">{service.description}</p>
                                 </div>
-                                <div className="mt-8">
-                                    <a className="font-semibold text-primary inline-flex items-center gap-2 group-hover:underline" href="#">
+                                <div className="mt-10">
+                                    <a className="font-bold text-primary inline-flex items-center gap-2 group-hover:underline decoration-2 underline-offset-4" href="#">
                                         Learn More
-                                        <span className="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+                                        <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     ))}
-                    <div className="group relative bg-white p-8 transition-all hover:bg-primary/5 flex flex-col items-center justify-center text-center">
-                        <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                    <div className="group relative bg-primary p-10 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-2 flex flex-col items-start justify-center text-white">
+                        <div className="size-16 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-8">
                             <span className="material-symbols-outlined text-4xl">add</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 font-display">Your Next Project</h3>
-                        <p className="mt-2 text-base text-text-secondary leading-relaxed">
-                            Have an idea? Let's discuss how we can bring it to life together.
+                        <h3 className="text-3xl font-bold font-display mb-4">Your Next Project</h3>
+                        <p className="text-base text-primary-50/80 leading-relaxed mb-10">
+                            Have a unique challenge? Let's discuss how we can bring your vision to life with our integrated approach.
                         </p>
-                        <div className="mt-6">
-                            <a className="font-semibold text-primary inline-flex items-center gap-2 group-hover:underline" href="#/contact">
-                                Get in Touch
-                                <span className="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
-                            </a>
-                        </div>
+                        <a className="h-12 px-8 rounded-full bg-white text-primary font-bold flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-lg" href="#/contact">
+                            Get in Touch
+                        </a>
                     </div>
                 </div>
             </div>

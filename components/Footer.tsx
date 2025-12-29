@@ -7,12 +7,11 @@ const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4 text-slate-900">
-              <img src="/logo.svg" alt="Logo" className="h-24 w-auto" />
-              <h3 className="text-lg font-bold font-display"></h3>
+            <div className="flex items-center gap-2 mb-6 text-slate-900 group">
+              <img src="/logo.svg" alt="Logo" className="h-12 w-auto transition-transform group-hover:scale-110" />
             </div>
-            <p className="text-sm text-text-secondary mb-4">
-              Designing the future of interaction in Hong Kong.
+            <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
+              Designing the future of interaction in Hong Kong. We blend physical and digital realms to create unforgettable experiences.
             </p>
           </div>
           <div>

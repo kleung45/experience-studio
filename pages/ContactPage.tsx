@@ -16,75 +16,82 @@ const XIcon: React.FC = () => (
 
 const ContactPage: React.FC = () => {
     return (
-        <section className="py-24 sm:py-32 bg-white">
+        <section className="py-24 sm:py-32 bg-white overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-3xl text-center mb-16">
-                    <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl font-body">
-                        Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">amazing together</span>.
+                <div className="mx-auto max-w-3xl text-center mb-24 animate-fade-in-up">
+                    <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-7xl font-display leading-tight">
+                        Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">amazing together</span>.
                     </h1>
-                    <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-                        Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach out to us through one of our channels.
+                    <p className="mt-8 text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
+                        Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach out through our channels.
                     </p>
                 </div>
-                <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    <div className="lg:col-span-1 space-y-8">
+                <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+                    <div className="lg:col-span-5 space-y-12">
                         <div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Our Office</h3>
-                            <div className="flex items-start gap-4 text-text-secondary">
-                                <span className="material-symbols-outlined text-primary mt-1">location_on</span>
-                                <p className="text-sm leading-relaxed">14/F, Henley Industrial Center,<br />9-15 Bute St, Hong Kong</p>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-6 font-display">Our Office</h3>
+                            <div className="flex items-start gap-5 text-slate-500 group">
+                                <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/5 text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
+                                    <span className="material-symbols-outlined">location_on</span>
+                                </div>
+                                <p className="text-lg leading-relaxed pt-2">14/F, Henley Industrial Center,<br />9-15 Bute St, Hong Kong</p>
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Contact Details</h3>
-                            <div className="space-y-3">
-                                <div className="flex items-center gap-4 text-text-secondary">
-                                    <span className="material-symbols-outlined text-primary">mail</span>
-                                    <a className="text-sm hover:text-primary transition-colors" href="mailto:info@yookdesign.com">info@yookdesign.com</a>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-6 font-display">Contact Details</h3>
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-5 text-slate-500 group">
+                                    <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/5 text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span className="material-symbols-outlined">mail</span>
+                                    </div>
+                                    <a className="text-lg font-medium hover:text-primary transition-colors pt-1" href="mailto:info@yookdesign.com">info@yookdesign.com</a>
                                 </div>
-                                <div className="flex items-center gap-4 text-text-secondary">
-                                    <span className="material-symbols-outlined text-primary">call</span>
-                                    <a className="text-sm hover:text-primary transition-colors" href="tel:+85212345678">+852 1234 5678</a>
+                                <div className="flex items-center gap-5 text-slate-500 group">
+                                    <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/5 text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span className="material-symbols-outlined">call</span>
+                                    </div>
+                                    <a className="text-lg font-medium hover:text-primary transition-colors pt-1" href="tel:+85212345678">+852 1234 5678</a>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-4">Follow Us</h3>
-                            <div className="flex gap-4">
-                                <a className="flex items-center justify-center size-10 rounded-full bg-slate-100 text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#"><InstagramIcon /></a>
-                                <a className="flex items-center justify-center size-10 rounded-full bg-slate-100 text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#"><DribbbleIcon /></a>
-                                <a className="flex items-center justify-center size-10 rounded-full bg-slate-100 text-slate-600 hover:bg-primary/10 hover:text-primary transition-colors" href="#"><XIcon /></a>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-6 font-display">Follow Us</h3>
+                            <div className="flex gap-5">
+                                <a className="flex items-center justify-center size-14 rounded-2xl bg-slate-50 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all hover:-translate-y-1" href="#"><InstagramIcon /></a>
+                                <a className="flex items-center justify-center size-14 rounded-2xl bg-slate-50 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all hover:-translate-y-1" href="#"><DribbbleIcon /></a>
+                                <a className="flex items-center justify-center size-14 rounded-2xl bg-slate-50 text-slate-600 hover:bg-primary/10 hover:text-primary transition-all hover:-translate-y-1" href="#"><XIcon /></a>
                             </div>
                         </div>
                     </div>
-                    <div className="lg:col-span-2">
-                        <div className="bg-surface-light p-8 sm:p-12 rounded-xl border border-surface-border">
-                            <form action="#" className="space-y-6" method="POST" onSubmit={(e) => e.preventDefault()}>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="lg:col-span-7">
+                        <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden">
+                            <div className="absolute top-0 right-0 -mr-20 -mt-20 size-64 bg-primary/5 rounded-full blur-3xl"></div>
+                            <form action="#" className="space-y-8 relative z-10" method="POST" onSubmit={(e) => e.preventDefault()}>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2" htmlFor="first-name">First Name</label>
-                                        <input autoComplete="given-name" className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-slate-400" id="first-name" name="first-name" placeholder="John" type="text" />
+                                        <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="first-name">First Name</label>
+                                        <input autoComplete="given-name" className="block w-full h-14 rounded-2xl border-slate-200 bg-white shadow-sm focus:border-primary focus:ring-primary/20 sm:text-base placeholder:text-slate-400 transition-all" id="first-name" name="first-name" placeholder="John" type="text" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2" htmlFor="last-name">Last Name</label>
-                                        <input autoComplete="family-name" className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-slate-400" id="last-name" name="last-name" placeholder="Doe" type="text" />
+                                        <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="last-name">Last Name</label>
+                                        <input autoComplete="family-name" className="block w-full h-14 rounded-2xl border-slate-200 bg-white shadow-sm focus:border-primary focus:ring-primary/20 sm:text-base placeholder:text-slate-400 transition-all" id="last-name" name="last-name" placeholder="Doe" type="text" />
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2" htmlFor="email">Email</label>
-                                    <input autoComplete="email" className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-slate-400" id="email" name="email" placeholder="you@example.com" type="email" />
+                                    <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="email">Email Address</label>
+                                    <input autoComplete="email" className="block w-full h-14 rounded-2xl border-slate-200 bg-white shadow-sm focus:border-primary focus:ring-primary/20 sm:text-base placeholder:text-slate-400 transition-all" id="email" name="email" placeholder="you@example.com" type="email" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2" htmlFor="subject">Subject</label>
-                                    <input className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-slate-400" id="subject" name="subject" placeholder="Inquiry about a new project" type="text" />
+                                    <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="subject">Subject</label>
+                                    <input className="block w-full h-14 rounded-2xl border-slate-200 bg-white shadow-sm focus:border-primary focus:ring-primary/20 sm:text-base placeholder:text-slate-400 transition-all" id="subject" name="subject" placeholder="Inquiry about a new project" type="text" />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-slate-700 mb-2" htmlFor="message">Message</label>
-                                    <textarea className="block w-full rounded-lg border-slate-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm placeholder:text-slate-400" id="message" name="message" placeholder="Tell us more about your project..." rows={5}></textarea>
+                                    <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="message">How can we help?</label>
+                                    <textarea className="block w-full rounded-2xl border-slate-200 bg-white shadow-sm focus:border-primary focus:ring-primary/20 sm:text-base placeholder:text-slate-400 transition-all" id="message" name="message" placeholder="Tell us more about your project goals..." rows={5}></textarea>
                                 </div>
-                                <div className="pt-2">
-                                    <button className="w-full h-12 rounded-full bg-primary px-8 text-base font-bold text-white transition hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-lg shadow-primary/25" type="submit">
-                                        Send Message
+                                <div className="pt-4">
+                                    <button className="w-full h-14 rounded-2xl bg-primary px-8 text-lg font-bold text-white transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-xl shadow-primary/25" type="submit">
+                                        Send Inquiry
                                     </button>
                                 </div>
                             </form>

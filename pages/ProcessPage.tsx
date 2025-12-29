@@ -11,28 +11,26 @@ const steps = [
 
 const ProcessPage: React.FC = () => {
     return (
-        <section className="py-24 sm:py-32">
+        <section className="py-24 sm:py-32 bg-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl font-display">
+                <div className="mx-auto max-w-3xl text-center animate-fade-in-up mb-24">
+                    <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-7xl font-display leading-tight">
                         Our Integrated Process
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-text-secondary">
-                        From initial concept to final execution, our five-step process ensures a seamless journey, blending strategy with cutting-edge design to create unforgettable experiences.
+                    <p className="mt-8 text-xl leading-relaxed text-slate-500">
+                        From initial concept to final execution, our five-step process ensures a seamless journey, blending strategy with cutting-edge design.
                     </p>
                 </div>
-                <div className="mt-20">
-                    <div className="relative grid grid-cols-1 md:grid-cols-5 gap-y-16 md:gap-y-0 md:gap-x-8">
+                <div className="relative">
+                    <div className="hidden lg:block absolute left-0 right-0 top-10 h-1 bg-slate-100 -z-10"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
                         {steps.map((step, index) => (
-                            <div key={index} className="relative flex flex-col items-center text-center">
-                                 {index !== steps.length - 1 && (
-                                    <div className="hidden md:block absolute left-1/2 top-7 h-0.5 w-full bg-surface-border z-0"></div>
-                                )}
-                                <div className="relative z-10 flex size-14 items-center justify-center rounded-full border-2 border-primary bg-background-light mb-6">
-                                    <span className="text-2xl font-bold font-display text-primary">{step.number}</span>
+                            <div key={index} className="group relative flex flex-col items-center text-center">
+                                <div className="relative z-10 flex size-20 items-center justify-center rounded-[2rem] border-4 border-white bg-white shadow-xl text-primary mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                                    <span className="text-3xl font-black font-display">{step.number}</span>
                                 </div>
-                                <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{step.title}</h3>
-                                <p className="text-sm text-text-secondary leading-relaxed">
+                                <h3 className="text-2xl font-bold font-display text-slate-900 mb-4">{step.title}</h3>
+                                <p className="text-base text-slate-500 leading-relaxed">
                                     {step.description}
                                 </p>
                             </div>

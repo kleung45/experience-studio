@@ -21,26 +21,29 @@ const testimonials = [
 const ImpactPage: React.FC = () => {
     return (
         <>
-            <section className="py-24 sm:py-32">
+            <section className="py-24 sm:py-32 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <p className="text-base font-semibold leading-7 text-primary font-display">Our Results</p>
-                        <h1 className="mt-2 text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl font-display">Driving Measurable Impact</h1>
-                        <p className="mt-6 text-lg leading-8 text-text-secondary">We believe great design isn't just about aesthetics; it's about delivering tangible results that propel our clients forward. Our data-driven approach ensures every project creates meaningful value.</p>
+                    <div className="max-w-4xl mx-auto text-center animate-fade-in-up mb-24">
+                        <p className="text-base font-bold leading-7 text-primary font-display uppercase tracking-widest">Our Results</p>
+                        <h1 className="mt-6 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl lg:text-7xl font-display leading-tight">Driving <br />Measurable Impact</h1>
+                        <p className="mt-8 text-xl leading-relaxed text-slate-500 max-w-2xl mx-auto">We believe great design isn't just about aesthetics; it's about delivering tangible results that propel our clients forward.</p>
                     </div>
-                    <div className="mt-20">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                            <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-8 shadow-sm border border-surface-border">
-                                <p className="text-6xl font-bold tracking-tight text-primary font-display">35%</p>
-                                <p className="mt-2 text-base font-medium text-text-secondary">Average Increase in User Engagement</p>
+                    <div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                            <div className="flex flex-col items-center justify-center rounded-[2.5rem] bg-slate-50 p-12 transition-transform hover:-translate-y-2 group">
+                                <p className="text-7xl font-black tracking-tight text-primary font-display group-hover:scale-110 transition-transform duration-500">35%</p>
+                                <p className="mt-4 text-lg font-bold text-slate-900 font-display">Engagement</p>
+                                <p className="mt-1 text-sm text-slate-500">Average increase in user dwell time</p>
                             </div>
-                            <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-8 shadow-sm border border-surface-border">
-                                <p className="text-6xl font-bold tracking-tight text-primary font-display">2.5x</p>
-                                <p className="mt-2 text-base font-medium text-text-secondary">Higher Conversion Rates Post-Redesign</p>
+                            <div className="flex flex-col items-center justify-center rounded-[2.5rem] bg-slate-50 p-12 transition-transform hover:-translate-y-2 group">
+                                <p className="text-7xl font-black tracking-tight text-primary font-display group-hover:scale-110 transition-transform duration-500">2.5x</p>
+                                <p className="mt-4 text-lg font-bold text-slate-900 font-display">Conversion</p>
+                                <p className="mt-1 text-sm text-slate-500">Higher rates post-redesign</p>
                             </div>
-                            <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-8 shadow-sm border border-surface-border">
-                                <p className="text-6xl font-bold tracking-tight text-primary font-display">98%</p>
-                                <p className="mt-2 text-base font-medium text-text-secondary">Client Satisfaction & Retention Rate</p>
+                            <div className="flex flex-col items-center justify-center rounded-[2.5rem] bg-slate-50 p-12 transition-transform hover:-translate-y-2 group">
+                                <p className="text-7xl font-black tracking-tight text-primary font-display group-hover:scale-110 transition-transform duration-500">98%</p>
+                                <p className="mt-4 text-lg font-bold text-slate-900 font-display">Satisfaction</p>
+                                <p className="mt-1 text-sm text-slate-500">Client retention & success rate</p>
                             </div>
                         </div>
                     </div>
