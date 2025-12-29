@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stacked circles/discs -->
+  <ellipse cx="512" cy="280" rx="180" ry="90" fill="none" stroke="#2d3e50" stroke-width="50" stroke-linecap="round"/>
+  <ellipse cx="512" cy="420" rx="180" ry="90" fill="none" stroke="#2d3e50" stroke-width="50" stroke-linecap="round"/>
+  <ellipse cx="512" cy="560" rx="180" ry="90" fill="none" stroke="#2d3e50" stroke-width="50" stroke-linecap="round"/>
+  
+  <!-- Yook text -->
+  <text x="512" y="800" font-family="Arial, sans-serif" font-size="240" font-weight="bold" text-anchor="middle" fill="#2d3e50" letter-spacing="20">yook</text>
+</svg>
