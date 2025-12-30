@@ -3,7 +3,7 @@ import React from 'react';
 
 const testimonials = [
     {
-        quote: "“The team at Experience Studio HK transformed our retail space into a dynamic, interactive journey. Customer dwell time has doubled, and sales are up 40% year-over-year. Truly phenomenal.”",
+        quote: "“The team at Yook transformed our retail space into a dynamic, interactive journey. Customer dwell time has doubled, and sales are up 40% year-over-year. Truly phenomenal.”",
         author: "Alex Chen",
         title: "Marketing Director, Avant Garde",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",

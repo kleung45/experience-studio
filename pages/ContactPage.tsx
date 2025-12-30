@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
                     <div className="lg:col-span-7">
                         <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden">
                             <div className="absolute top-0 right-0 -mr-20 -mt-20 size-64 bg-primary/5 rounded-full blur-3xl"></div>
-                            <form action="#" className="space-y-8 relative z-10" method="POST" onSubmit={(e) => e.preventDefault()}>
+                            <form action="https://formspree.io/f/mregvzdl" className="space-y-8 relative z-10" method="POST">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-3" htmlFor="first-name">First Name</label>

@@ -11,21 +11,21 @@ const expertise = [
 
 const galleryImages = [
   "/Project-A.png",
-  "/Project-B.webp",
+  "/Project-B.png",
   "/Project-C.png",
   "/Project-D.png",
-  "/1.png",
-  "/2.png",
-  "/4.png",
-  "/5.png",
-  "/6.png",
-  "/7.png",
-  "/8.png",
-  "/9.png",
-  "/10.png",
-  "/11.png",
-  "/12.png",
-  "/13.png",
+  "/Project-E.jpg",
+  "/Project-F.png",
+  "/Project-G.png",
+  "/Project-H.png",
+  "/Project-I.png",
+  "/Project-J.png",
+  "/Project-K.jpg",
+  "/Project-L.png",
+  "/Project-M.png",
+  "/Project-N.png",
+  "/Project-O.png",
+  "/Project-P.png",
 ];
 
 const HomePage: React.FC = () => {
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
             Accepting new projects in Hong Kong
           </div>
           <h1 className="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl lg:text-7xl font-display">
-            Designing the Future of Interaction <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">in Hong Kong</span>
+            Designing the Future of Interaction <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">with Yook Design</span>
           </h1>
           <p className="max-w-2xl text-lg text-slate-600 sm:text-xl leading-relaxed">
             We blend physical space with digital innovation to create integrated retail, exhibition, and product experiences that captivate and convert.
