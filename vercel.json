@@ -2,6 +2,12 @@
     "redirects": [
         {
             "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.yookdesign.com"
+                }
+            ],
             "destination": "https://yookdesign.com/:path*",
             "permanent": true
         }
