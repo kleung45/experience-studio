@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/:path*",
+            "destination": "https://yookdesign.com/:path*",
+            "permanent": true
+        }
+    ]
+}
