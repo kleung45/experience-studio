@@ -46,12 +46,6 @@ const ContactPage: React.FC = () => {
                                     </div>
                                     <a className="text-lg font-medium hover:text-primary transition-colors pt-1" href="mailto:info@yookdesign.com">info@yookdesign.com</a>
                                 </div>
-                                <div className="flex items-center gap-5 text-slate-500 group">
-                                    <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/5 text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
-                                        <span className="material-symbols-outlined">call</span>
-                                    </div>
-                                    <a className="text-lg font-medium hover:text-primary transition-colors pt-1" href="tel:+85212345678">+852 1234 5678</a>
-                                </div>
                             </div>
                         </div>
                         <div>
