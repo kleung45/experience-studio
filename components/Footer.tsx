@@ -37,8 +37,8 @@ const Footer: React.FC = () => {
               info@yookdesign.com
             </p>
             <p className="text-sm text-text-secondary">
-              14/F, Henley Industrial Center,<br />
-              9-15 Bute St, Hong Kong
+              14/F, Henley Industrial Centre,<br />
+              9-15 Bute St, Mongkok, Hong Kong.
             </p>
           </div>
         </div>

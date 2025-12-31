@@ -34,7 +34,7 @@ const ContactPage: React.FC = () => {
                                 <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/5 text-primary shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
                                     <span className="material-symbols-outlined">location_on</span>
                                 </div>
-                                <p className="text-lg leading-relaxed pt-2">14/F, Henley Industrial Center,<br />9-15 Bute St, Hong Kong</p>
+                                <p className="text-lg leading-relaxed pt-2">14/F, Henley Industrial Centre,<br />9-15 Bute St, Mongkok, Hong Kong.</p>
                             </div>
                         </div>
                         <div>
