@@ -22,17 +22,73 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section with Animated Geometric Patterns */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        {/* Background decoration */}
+        <style>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+          }
+          @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+          @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+          }
+          @keyframes slide-in {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+          .animate-float { animation: float 6s ease-in-out infinite; }
+          .animate-rotate { animation: rotate 20s linear infinite; }
+          .animate-pulse-scale { animation: pulse-scale 4s ease-in-out infinite; }
+          .animate-slide-in { animation: slide-in 0.8s ease-out; }
+        `}</style>
+
+        {/* Animated Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+          {/* Floating geometric shapes */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-40 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+
+          {/* Animated grid pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="w-full h-full" preserveAspectRatio="none">
+              <defs>
+                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                  <path d="M 80 0 L 0 0 0 80" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary/30"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+
+          {/* Animated geometric lines */}
+          <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" style={{ opacity: 0.15 }}>
+            <line x1="0" y1="0" x2="100%" y2="100%" stroke="currentColor" strokeWidth="2" className="text-primary animate-pulse" />
+            <line x1="100%" y1="0" x2="0" y2="100%" stroke="currentColor" strokeWidth="2" className="text-blue-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          </svg>
+
+          {/* Floating cubes/boxes */}
+          <div className="absolute top-1/4 left-1/4 w-24 h-24 border-2 border-primary/30 rounded-lg animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-32 h-32 border-2 border-blue-400/20 rounded-lg animate-float" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute bottom-1/4 left-1/2 w-20 h-20 border-2 border-cyan-400/20 rounded-lg animate-float" style={{ animationDelay: '2s' }}></div>
+
+          {/* Rotating geometric elements */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 animate-rotate" style={{ animationDuration: '30s' }}>
+            <svg viewBox="0 0 100 100" className="w-full h-full opacity-20">
+              <polygon points="50,10 90,90 10,90" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary" />
+            </svg>
+          </div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in-up">
+          <div className="animate-slide-in">
             <p className="text-base font-bold leading-7 text-primary font-display uppercase tracking-widest mb-6">
               Welcome to Yook Design
             </p>
