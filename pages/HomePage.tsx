@@ -10,24 +10,14 @@ import React from 'react';
  */
 
 const HomePage: React.FC = () => {
-  // Gallery images - moved to component level for potential memoization
-  const galleryImages = [
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441984904556-0ac8d9d0b10d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441986300352-7e3dee05ae6f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441984904556-0ac8d9d0b10d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441986300352-7e3dee05ae6f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441984904556-0ac8d9d0b10d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441986300352-7e3dee05ae6f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441984904556-0ac8d9d0b10d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441986300352-7e3dee05ae6f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441984904556-0ac8d9d0b10d?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441986300352-7e3dee05ae6f?q=80&w=800&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop",
+  // Featured projects from portfolio - using actual work images
+  const featuredProjects = [
+    { title: "A. Lange & Söhne", description: "Exclusive exhibition in Hong Kong showcasing watchmaking artistry", image: "/AA.png" },
+    { title: "Timevallee", description: "Curated showcase of renowned watchmaking at Hainan exhibition", image: "/Timevalle.png" },
+    { title: "Ocean Ground Flagship Store", description: "Beijing flagship store embodying exceptional coffee quality", image: "/OG.png" },
+    { title: "Manulife Conference", description: "Formula 1-inspired stage for Hong Kong's conference", image: "/ML.png" },
+    { title: "DJI Exhibition", description: "Immersive spatial design showcasing latest drone technology", image: "/16.png" },
+    { title: "Burberry Interactive Windows", description: "Interactive floral installation with motion-responsive experience", image: "/burberry.jpg" },
   ];
 
   return (
@@ -85,25 +75,33 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
-          {/* Gallery Grid with Lazy Loading */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryImages.map((src, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 cursor-pointer"
-              >
-                {/* Image with lazy loading */}
-                <img
-                  alt={`Yook Design project thumbnail ${index + 1}`}
-                  src={src}
-                  loading="lazy" // ← Critical: Lazy load images
-                  decoding="async" // ← Critical: Async decode for better performance
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white font-bold">View Project</p>
+          {/* Featured Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredProjects.map((project, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="mb-6 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10 group-hover:-translate-y-2">
+                  <img
+                    alt={project.title}
+                    src={project.image}
+                    loading="lazy" // ← Critical: Lazy load images
+                    decoding="async" // ← Critical: Async decode for better performance
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold leading-tight tracking-tight text-slate-900 font-display group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-base text-slate-500 leading-relaxed line-clamp-2">{project.description}</p>
+                  <a
+                    href="#/work"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline decoration-2 underline-offset-4"
+                  >
+                    View Case Study
+                    <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">
+                      arrow_forward
+                    </span>
+                  </a>
                 </div>
               </div>
             ))}
